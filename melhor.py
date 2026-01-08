@@ -1,11 +1,17 @@
 import flet as ft
 import csv
+import os
 
 ARQUIVO = "precos.csv"
 
 
 def carregar_dados():
     dados = []
+
+    # Proteção para erro de arquivo
+    if not os.path.exists(ARQUIVO):
+        return dados
+
     with open(ARQUIVO, encoding="utf-8") as f:
         leitor = csv.DictReader(f)
         for linha in leitor:
@@ -16,8 +22,6 @@ def carregar_dados():
 
 def main(page: ft.Page):
     page.title = "🛒 Melhores Preços - Sergipe"
-    page.window_width = 900
-    page.window_height = 600
     page.padding = 20
 
     dados = carregar_dados()
@@ -70,7 +74,7 @@ def main(page: ft.Page):
 
     busca = ft.TextField(
         label="Buscar produto",
-        prefix_icon=ft.Icons.SEARCH,  # ✅ CORRETO
+        prefix_icon=ft.Icons.SEARCH,
         expand=True,
         on_change=buscar
     )
@@ -92,11 +96,17 @@ def main(page: ft.Page):
     atualizar_tabela(dados)
 
     page.add(
-        ft.Text("📊 Comparador de Preços", size=22, weight="bold"),
+        ft.Text("📊 Comparador de Preços", size=22, weight=ft.FontWeight.BOLD),
         ft.Row([busca, cidade_input, estado_input]),
         ft.Divider(),
         tabela
     )
 
 
-ft.run(main)
+# 🔴 ISSO É O QUE FAZ FUNCIONAR NO RENDER
+ft.app(
+    target=main,
+    view=ft.WEB_BROWSER,
+    host="0.0.0.0",
+    port=10000
+)
