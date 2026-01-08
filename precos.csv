@@ -1,0 +1,20 @@
+Produto,Marca,Unidade,Preco,Local,Cidade,Estado
+Arroz,Tipo 1,1kg,6.79,GBarbosa,Aracaju,SE
+Arroz,Tipo 1,1kg,4.29,Atacadão,Aracaju,SE
+Arroz,Tipo 1,1kg,7.20,Supermercado X,Lagarto,SE
+Arroz,Tipo 1,1kg,6.50,Mercado Y,Itabaiana,SE
+Feijão,Carioca,1kg,5.99,GBarbosa,Aracaju,SE
+Feijão,Carioca,1kg,8.85,Assaí,Aracaju,SE
+Feijão,Carioca,1kg,6.80,Supermercado Z,Estância,SE
+Feijão,Carioca,1kg,7.10,Supermercado W,Nossa Sra da Glória,SE
+Óleo de Soja,Soya,900ml,5.89,Atacadão,Aracaju,SE
+Óleo de Soja,Soya,900ml,8.19,Mercado Central,Aracaju,SE
+Óleo de Soja,Soya,900ml,7.50,Supermercado V,Lagarto,SE
+Cuscuz Flocão,Vitamilho,500g,1.39,GBarbosa,Aracaju,SE
+Cuscuz Flocão,Vitamilho,500g,2.10,Supermercado U,Itabaiana,SE
+Tomate,Comum,1kg,2.49,Feira,Aracaju,SE
+Tomate,Comum,1kg,3.50,Feira Livre,Estância,SE
+Cebola,Comum,1kg,3.79,Feira,Aracaju,SE
+Cebola,Comum,1kg,5.50,Supermercado T,Lagarto,SE
+Alho,Comum,1kg,19.90,Feira,Aracaju,SE
+Alho,Comum,1kg,22.50,Supermercado S,Itabaiana,SE
