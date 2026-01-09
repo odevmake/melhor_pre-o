@@ -111,14 +111,15 @@ def main(page: ft.Page):
 
     ])
 
-    logo = ft.Image(
+logo = ft.Image(
+    
+    src="img.png",
+    width=600,
+    height=950,
+    fit=ft.ImageFit.CONTAIN,
+    
+)
 
-            src="img.png",
-            width=600,
-            height=950,
-            fit="contain",
-
-        )
 
     regiao = ft.Row([
 
@@ -151,8 +152,9 @@ def main(page: ft.Page):
 # 🔴 ISSO É O QUE FAZ FUNCIONAR NO RENDER
 ft.app(
     target=main,
-    assets_dir=" ",
+    assets_dir="assets",
     host="0.0.0.0",
     port=10000
 )
+
 
