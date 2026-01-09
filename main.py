@@ -95,11 +95,34 @@ def main(page: ft.Page):
 
     atualizar_tabela(dados)
 
+    texto_inicial = ft.Text(
+
+        "📊 Comparador de Preços",
+        size=22, weight=ft.FontWeight.BOLD
+
+    )
+
+    linha = ft.Row([
+
+        busca,
+        cidade_input,
+        estado_input
+
+    ])
+
+    regiao = ft.Container(
+
+        bgcolor=ft.Colors.BLACK,
+        padding=15,
+        content=tabela
+
+    )
+
     page.add(
-        ft.Text("📊 Comparador de Preços", size=22, weight=ft.FontWeight.BOLD),
-        ft.Row([busca, cidade_input, estado_input]),
+        texto_inicial,
+        linha,
         ft.Divider(),
-        tabela
+        regiao
     )
 
 
@@ -110,4 +133,3 @@ ft.app(
     host="0.0.0.0",
     port=10000
 )
-
