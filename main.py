@@ -111,7 +111,7 @@ def main(page: ft.Page):
         src="img.png",
         width=600,
         height=950,
-        fit=ft.ImageFit.CONTAIN,
+        fit="contain",
     )
 
     regiao = ft.Row([
@@ -142,3 +142,4 @@ ft.app(
     host="0.0.0.0",
     port=10000
 )
+
