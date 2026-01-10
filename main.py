@@ -9,7 +9,6 @@ ARQUIVO = "precos.csv"
 def carregar_dados():
     dados = []
 
-    # Proteção para erro de arquivo
     if not os.path.exists(ARQUIVO):
         return dados
 
@@ -97,48 +96,36 @@ def main(page: ft.Page):
     atualizar_tabela(dados)
 
     texto_inicial = ft.Text(
-
         "📊 Comparador de Preços",
-        size=22, weight=ft.FontWeight.BOLD
-
+        size=22,
+        weight=ft.FontWeight.BOLD
     )
 
     linha = ft.Row([
-
         busca,
         cidade_input,
         estado_input
-
     ])
 
-logo = ft.Image(
-    
-    src="img.png",
-    width=600,
-    height=950,
-    fit=ft.ImageFit.CONTAIN,
-    
-)
-
+    logo = ft.Image(
+        src="img.png",
+        width=600,
+        height=950,
+        fit=ft.ImageFit.CONTAIN,
+    )
 
     regiao = ft.Row([
-
         ft.Container(
-
             bgcolor=ft.Colors.BLACK,
             padding=15,
             content=tabela
         ),
-
         ft.Container(
-
             bgcolor=ft.Colors.BLACK,
             padding=15,
             alignment=ft.Alignment.TOP_LEFT,
             content=logo
-
         )
-
     ])
 
     page.add(
@@ -149,12 +136,9 @@ logo = ft.Image(
     )
 
 
-# 🔴 ISSO É O QUE FAZ FUNCIONAR NO RENDER
 ft.app(
     target=main,
     assets_dir="assets",
     host="0.0.0.0",
     port=10000
 )
-
-
