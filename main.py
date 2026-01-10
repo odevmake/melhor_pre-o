@@ -146,7 +146,7 @@ def main(page: ft.Page):
     logo = ft.Image(
         src="img.png",  # ⚠️ SEM assets/
         width=380,
-        fit=ft.ImageFit.CONTAIN
+        fit="contain"
     )
 
     # =========================
@@ -189,3 +189,4 @@ ft.app(
     host="0.0.0.0",
     port=10000
 )
+
