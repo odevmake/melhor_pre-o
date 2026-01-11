@@ -42,7 +42,7 @@ def carregar_dados():
 # APP
 # =========================
 def main(page: ft.Page):
-    page.title = "🛒 Melhores Preços - Sergipe"
+    page.title = "Melhores Preços - Sergipe"
     page.padding = 20
     page.scroll = ft.ScrollMode.AUTO
 
@@ -218,3 +218,4 @@ ft.app(
     host="0.0.0.0",
     port=10000
 )
+
